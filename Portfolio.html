@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohit's Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #ffffff;
+    }
+
+    header {
+      background-color: #000000;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-list {
+      list-style-type: none;
+      display: flex;
+      gap: 2rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-list li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-list li a:hover {
+      color: #ff3333;
+    }
+
+    section {
+      padding: 2rem;
+      min-height: 100vh;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h1, h2, h3 {
+      color: #ff3333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    table, th, td {
+      border: 1px solid #ff3333;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #350000;
+    }
+
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .welcome-message {
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 20%;
+      animation: fadeInScale 2s ease-out;
+    }
+
+    #bio-section {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    #bio-section img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff3333;
+    }
+
+    .bio {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #about {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #achievements {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    #achievements ol, #achievements ul {
+      background-color: #222;
+      padding: 20px 40px;
+      border-left: 4px solid #ff3333;
+    }
+
+    #achievements li {
+      margin-bottom: 10px;
+    }
+
+    .contact-info {
+      margin: 20px;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: center;
+      border-left: 4px solid #ff3333;
+    }
+
+    .contact-info h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-info a {
+      text-decoration: none;
+      color: #ff3333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .contact-info a:hover {
+      color: #ff6666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li><a href="#welcome" onclick="showSection('welcome')">Home</a></li>
+        <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#achievements" onclick="showSection('achievements')">My Achievements</a></li>
+        <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>     
+      </ul>
+    </nav>
+  </header>
+
+  <section id="welcome" class="active">
+    <h1 class="welcome-message">Welcome</h1>
+    <div id="bio-section">
+      <img src="rohit-photo.jpeg" alt="Rohit" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'150\' height=\'150\' viewBox=\'0 0 150 150\'%3E%3Crect width=\'150\' height=\'150\' fill=\'%23333\'/%3E%3Ctext x=\'75\' y=\'75\' font-size=\'18\' fill=\'%23fff\' text-anchor=\'middle\' dominant-baseline=\'middle\'%3ERohit%3C/text%3E%3C/svg%3E'">
+      <div class="bio">
+        <h2>About Me</h2>
+        <p>Hi, I'm Rohit, a passionate web developer with experience in building dynamic and responsive websites. I specialize in front-end technologies such as HTML, CSS, JavaScript, and React. I'm always eager to learn new skills and improve my craft. In my free time, I enjoy playing guitar and also am an amateur graphic designer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h1 align="center">Basic Info</h1>
+    <h2>My name is Rohit<br>I study at Fr Agnel Bandra</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>Rohit Ahir</td>
+      </tr>
+      <tr>
+        <th>Hobbies</th>
+        <td>Reading, Music</td>
+      </tr>
+      <tr>
+        <th>Branch</th>
+        <td>Comps C</td>
+      </tr>
+    </table>    
+  </section>
+
+  <section id="achievements">
+    <h1>My Achievements</h1>
+    <h2>Academic Achievements</h2>
+    <ol>
+      <li>10th Std: 70%</li>
+      <li>12th Std: 75%</li>
+      <li>CET Score: 87%</li>
+      <li>JEE Score: 93%</li>
+    </ol>
+    <h2>Extracurriculars</h2>
+    <ul>
+      <li>First year representative of the students council</li>
+      <li>Electric guitarist</li>
+      <li>Graphic Designer</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <div class="contact-info">
+      <h1>Contact Information</h1>
+      <p><strong>Mobile Number:</strong> +91 8999478310</p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/rohit.uhh" target="_blank">Rohit Ahir</a></p>
+    </div>
+  </section>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      document.getElementById(sectionId).classList.add('active');
+      
+      window.scrollTo(0, 0);
+      
+      return false;
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      showSection('welcome');
+      
+      const navLinks = document.querySelectorAll('.nav-list a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const sectionId = this.getAttribute('href').substring(1);
+          showSection(sectionId);
+        });
+      });
+    });
+  </script>
+</body>
+</
